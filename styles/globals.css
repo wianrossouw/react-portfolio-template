@@ -12,6 +12,19 @@ body {
   @apply dark:bg-black dark:text-white;
 }
 
+@font-face {
+  font-family: "Anton";
+  src: url("./fonts/Anton-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1{
+  font-family: Anton;
+  text-transform: uppercase;
+}
+
+
 .gradient-circle {
   position: absolute;
   pointer-events: none;
@@ -21,11 +34,6 @@ body {
   width: 100vw;
   opacity: 0.5;
   filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
 }
 .gradient-circle-bottom {
   position: absolute;
@@ -36,11 +44,7 @@ body {
   width: 100vw;
   opacity: 0.5;
   filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
+  background: black;
 }
 
 .gradient-shadow:hover::before {

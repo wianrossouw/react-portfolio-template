@@ -31,7 +31,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </h1>
 
               <div className="flex items-center">
-                {data.darkMode && (
+                {/* {data.darkMode && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
@@ -44,7 +44,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       }`}
                     ></img>
                   </Button>
-                )}
+                )} */}
 
                 <Popover.Button>
                   <img
@@ -69,12 +69,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
+                  <Button onClick={handleWorkScroll}>BOOK A SESSION</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
-                  {showResume && (
+                  {/* {showResume && (
                     <Button
                       onClick={() =>
                         window.open("mailto:hello@chetanverma.com")
@@ -82,7 +82,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     >
                       Resume
                     </Button>
-                  )}
+                  )} */}
 
                   <Button
                     onClick={() => window.open("mailto:hello@chetanverma.com")}
@@ -98,19 +98,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
-                  {showResume && (
+                  {/* {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
                       classes="first:ml-1"
                     >
                       Resume
                     </Button>
-                  )}
+                  )} */}
 
                   <Button
                     onClick={() => window.open("mailto:hello@chetanverma.com")}
                   >
-                    Contact
+                    Get in Touch
                   </Button>
                 </div>
               )}
@@ -123,30 +123,30 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
+        {/* <h1
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
           {name}.
-        </h1>
+        </h1> */}
         {!isBlog ? (
           <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
+            <Button onClick={handleWorkScroll}>Production Classes</Button>
+            <Button onClick={handleAboutScroll}>Releases</Button>
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
-            {showResume && (
+            {/* {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
                 classes="first:ml-1"
               >
                 Resume
               </Button>
-            )}
+            )} */}
 
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+              Get in Touch
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
@@ -178,7 +178,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Contact
             </Button>
 
-            {mounted && theme && data.darkMode && (
+            {/* {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -187,7 +187,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
-            )}
+            )} */}
           </div>
         )}
       </div>
